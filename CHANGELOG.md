@@ -1,5 +1,172 @@
 # Changelog
 
+## v2.155.0 (2023-05-15)
+
+### Features
+
+ * Add support for SageMaker Serverless inference Provisioned Concurrency feature
+
+### Bug Fixes and Other Changes
+
+ * Revert "fix: make RemoteExecutor context manager non-blocking on pend…
+ * Add BOM to no No P2 Availability region list
+
+## v2.154.0 (2023-05-11)
+
+### Features
+
+ * Add integ tests for remote_function, auto_capture functionality
+ * jumpstart model estimator classes
+
+### Bug Fixes and Other Changes
+
+ * integs - pytorch transformer deps and add test retry
+ * adding .lower() so new Pandas dtypes will match the type lookup.
+ * Pass KMS value to create processing job
+
+## v2.153.0 (2023-05-09)
+
+### Features
+
+ * Support npz archives in NumpyDeserializer
+ * Add FasterTransformer DJL support
+ * support for Sample Weights for SageMaker Autopilot
+
+### Bug Fixes and Other Changes
+
+ * retry is_run assertion
+ * Avoid 'AttributeError' for endpoint_name, if deploy() is not yet called
+ * Fix LambdaStep Creation
+ * Fix error when instance_count>1 in remote_function
+ * Remove deprecated update_endpoint from deploy() args in TensorFlowModel
+ * Update DJL deepspeed and fastertransformer DLC image uris
+ * remote_function python version mismatch issue
+
+## v2.152.0 (2023-05-04)
+
+### Features
+
+ * add support for lineage visualization using pyvis
+ * Expose Experiment class publicly
+ * PyTorch 1.13 release
+
+### Bug Fixes and Other Changes
+
+ * Change data_type argument to dtype to keep consistent with D…
+ * Skip edge test
+ * make RemoteExecutor context manager non-blocking on pending futures
+ * Add inferentia2 DLC images for djl framework
+ * Fix typo in using_pytorch.rst
+ * Unable to attach estimator to training job when KeepAlivePeriodInSeconds specified
+ * update LMI container image
+ * Update Clarify SHAPConfig baseline to allow JSON structures
+
+### Documentation Changes
+
+ * Fix broken link in DJL SageMaker docs
+ * currency update for the SageMaker data parallelism lib
+ * SM model parallel library v1.15.0 release note
+
+## v2.151.0 (2023-04-27)
+
+### Features
+
+ * Update Transformers 4.26 - TensorFlow 2.11.0 Image URI
+ * Add Extra Parameters to Lambda Function Wrapper
+
+### Bug Fixes and Other Changes
+
+ * Add kms key support for Model registration
+ * Enable inference recommender slow tests
+ * Pass sagemaker session to downstream s3 calls
+ * Add ap-south-1 to no p3 regions
+ * skip test for p2 instance for TF2.12 and above
+
+### Documentation Changes
+
+ * Fix minor misses from the remote function doc release
+
+## v2.150.0 (2023-04-26)
+
+### Features
+
+ * Introduce TensorBoard app class
+
+### Bug Fixes and Other Changes
+
+ * Update data wrangler images
+
+## v2.149.0 (2023-04-25)
+
+### Features
+
+ * Support TF2.12 SageMaker DLC
+
+### Bug Fixes and Other Changes
+
+ * update the doc for Join function
+ * change s3UploadMode of sagemaker clarify processing output for computer vision jobs.
+
+### Documentation Changes
+
+ * Add Remote Function updates
+
+## v2.148.0 (2023-04-20)
+
+### Features
+
+ * [huggingface] Add `torch.distributed` support for Trainium and `torchrun`
+ * Add PyTorch 2.0 to SDK
+
+### Bug Fixes and Other Changes
+
+ * updating batch transform job in monitoring schedule
+
+## v2.147.0 (2023-04-18)
+
+### Features
+
+ * support different types of deletion mode
+
+## v2.146.1 (2023-04-17)
+
+### Bug Fixes and Other Changes
+
+ * skip failing tests temporarily
+ * Added ml.p4d and ml.p4de as supported instances for DeepSpeed
+
+### Documentation Changes
+
+ * Add Model Registry Model Collection
+
+## v2.146.0 (2023-04-13)
+
+### Features
+
+ * Add support for JSON model inputs for Clarify Processor
+
+### Bug Fixes and Other Changes
+
+ * Feature/list collection
+ * improve reliability of Run integration test
+ * Add a comment that smdataparallel lib excludes tf 2.12 support
+
+### Documentation Changes
+
+ * Update reference to load run method in documentation
+
+## v2.145.0 (2023-04-06)
+
+### Features
+
+ * add support for async inline error notifications
+ * Add methods for feature group to list feature metadata parameters and tags
+ * Support huggingface hub model_id for DJL Models
+
+### Bug Fixes and Other Changes
+
+ * load_sagemaker_config should lazy initialize a default S3 resource
+
 ## v2.144.0 (2023-04-05)
 
 ### Features
